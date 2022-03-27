@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+<channel>
+  <title>Nindo Blog</title>
+  <link>https://nindo.geheimesite.nl/blog</link>
+  <description>The official micro blog for Nindo.</description>
+  <lastBuildDate>Sun, 27 Mar 2022 15:12:45 +0000</lastBuildDate>
+  <language>en-us</language>
+<item>
+  <title>The current state of Nindo</title>
+  <description><![CDATA[<p>
+You might have noticed that after December last year Nindo went silent. That is for a reason. The core functionality of Nindo, the RSS features, is built wrong. </p>
+<p>
+What does that mean? That means every post on every RSS feed loaded into Nindo is cached twice. In memory. That means that after adding 8 or more feeds Nindo basically crashes. That is easily fixed by just slamming a lot of RAM at the Nindo instance, but is that really a solution. So I’m trying to rework the inner workings of Nindo while keeping it compatible with the current web interface and also working on other projects and trying to get good grades at school. Which is a bit too much. So I just stopped.</p>
+<p>
+That doesn’t mean that I won’t work on Nindo anymore. It just means development will be a lot slower, if not none, for the coming months. I hope my three readers will understand and I hope Nindo will become somewhat stable in the coming year.</p>
+<p>
+See ya!</p>
+]]></description>
+  <pubDate>Sat, 05 Mar 2022 13:05:16 +0000</pubDate>
+  <link>https://nindo.geheimesite.nl/post/24</link>
+  <guid>https://nindo.geheimesite.nl/post/24</guid>
+</item>
+<item>
+  <title>Font preference</title>
+  <description><![CDATA[<p>
+I added a quick way to toggle the font used to display posts, alongside share options. It will be saved to localStorage and is loaded using a Phoenix Hook. Available fonts are the default (system) sans font, Merriweater, Helvetica and Ubuntu Mono.</p>
+]]></description>
+  <pubDate>Thu, 23 Dec 2021 20:56:07 +0000</pubDate>
+  <link>https://nindo.geheimesite.nl/post/15</link>
+  <guid>https://nindo.geheimesite.nl/post/15</guid>
+</item>
+<item>
+  <title>API for raw markdown</title>
+  <description><![CDATA[<p>
+I have written a quick and dirty API to share the raw markdown of posts by accessing <code>/markdown/:id</code>. Maybe this will be usefull for somebody :)</p>
+]]></description>
+  <pubDate>Wed, 22 Dec 2021 17:22:16 +0000</pubDate>
+  <link>https://nindo.geheimesite.nl/post/14</link>
+  <guid>https://nindo.geheimesite.nl/post/14</guid>
+</item>
+<item>
+  <title>Switching to Invidious</title>
+  <description><![CDATA[<p>
+The YouTube embeds will soon be from Invidious instead of YouTube itself. This will eliminate all the stupid YouTube tracking. The Invidious instance that Nindo will use is <a href="https://yewtu.be">yewtu.be</a>.</p>
+]]></description>
+  <pubDate>Wed, 22 Dec 2021 12:55:38 +0000</pubDate>
+  <link>https://nindo.geheimesite.nl/post/13</link>
+  <guid>https://nindo.geheimesite.nl/post/13</guid>
+</item>
+<item>
+  <title>Finishing the transition to Phoenix LiveView.</title>
+  <description><![CDATA[<p>
+As some of you might know from my previous posts, I have been spending the last week to converting the traditional HTTP-based controller design of Nindo to a faster and over all better alternative: Phoenix LiveView.</p>
+<h2>
+What is LiveView</h2>
+<p>
+LiveView is an alternative for traditional HTTP controllers and single page webapps. Where in the previous version of Nindo you needed to send a HTTP request for every action, which reloads the page and is quite slow, there is now a websocket connection that allows for on-demand messaging between the client and server.</p>
+<h2>
+Why?</h2>
+<p>
+I had several reasons to do so. First of all, I wanted to learn how LiveView works. I think I now have a quite solid understanding of how it works and that is nice. I also wanted to make the PWA more responsive. Currently it feels like some weird website that I yonked and just put on my phone.</p>
+<p>
+LiveView allows for live navigation. That means that when you navigate to another page you also don’t need to send another HTTP request which is, like I just said, quite slow. Instead we use <code>live_patch</code> (<a href="https://hexdocs.pm/phoenix_live_view/Phoenix.LiveView.Helpers.html#live_patch/2">docs</a>]. Live patching the page means we alter the DOM to display a new page and change the URI, but <strong>don’t reload</strong>. That makes navigation feel <em>almost</em> as snappy and responsive as native apps.</p>
+<p>
+Another benefit is that LiveView sends less data over the network and thus saves bandwith. Where currently I need to rerender the entire page for every action in LiveView only the data that needs to be updated is sent over the websocket connection, which is way quicker.</p>
+<p>
+While rewriting all the modules and controllers to support LiveView I also did a lot of refactoring and visual improvements. The darkmode should look less sketchy in some places and the typography is now handled by <a href="https://tailwindcss.com/docs/typography-plugin"><code>@tailwindcss/typography</code></a>.</p>
+<p>
+I have deployed the new LiveView version this afternoon and the code is publicly available on GitHub.</p>
+<p>
+- Robin</p>
+<ul>
+  <li>
+<a href="https://github.com/RobinBoers/nindo-phx">Source</a>  </li>
+  <li>
+<a href="https://docs.geheimesite.nl/nindo-phx">Documentation</a>  </li>
+</ul>
+]]></description>
+  <pubDate>Mon, 20 Dec 2021 15:55:29 +0000</pubDate>
+  <link>https://nindo.geheimesite.nl/post/11</link>
+  <guid>https://nindo.geheimesite.nl/post/11</guid>
+</item>
+<item>
+  <title>The docs have moved.</title>
+  <description><![CDATA[<p>
+I just moved the docs from <a href="https://robinboers.github.io/nindo-phx">https://robinboers.github.io/nindo-phx</a> to <a href="https://docs.geheimesite.nl/nindo-phx">https://docs.geheimesite.nl/nindo-phx</a>. They’re still hosted using GitHub actions and automatically built and deployed when I push to the master branch. When you visit the old URI it will simply redirect you to the new domain. I also configured the root domain to point at <a href="https://code.geheimesite.nl">https://code.geheimesite.nl</a>. For some reason GitHub doesn’t support <code>.htaccess</code> files, so I used some JS (I know, it’s a bit hacky).</p>
+]]></description>
+  <pubDate>Sat, 18 Dec 2021 14:19:08 +0000</pubDate>
+  <link>https://nindo.geheimesite.nl/post/9</link>
+  <guid>https://nindo.geheimesite.nl/post/9</guid>
+</item>
+<item>
+  <title>LiveView works now?!</title>
+  <description><![CDATA[<p>
+ Well, that was unexpected. The LiveView homepage actually works now. I only had to post over 30 million test posts to check whether it was working. Anyway, time to get the champagne (nevermind, I’m underage_)</p>
+<p>
+For those very confused now, I’ve been working on a LiveView version of Nindo: <a href="https://github.com/RobinBoers/nindo-phx/tree/live-view">https://github.com/RobinBoers/nindo-phx/tree/live-view</a>. I’m trying to port the main social view (home feed, discover, search and sources) to LiveView. If successfull, I will also try to port some other parts of Nindo (mainly posts, external posts, comments and feeds).</p>
+]]></description>
+  <pubDate>Sat, 18 Dec 2021 10:30:46 +0000</pubDate>
+  <link>https://nindo.geheimesite.nl/post/8</link>
+  <guid>https://nindo.geheimesite.nl/post/8</guid>
+</item>
+<item>
+  <title>Introducing: Nindo (again)</title>
+  <description><![CDATA[<p>
+Some of you might remember Nindo. It is a small-scale social media platform I introduced somewhere around 2019. It was written very poorly, and to add insult to injury I chose PHP. It was only used by a few people from a local programming community, but it was the first fairly large project I ever worked on, and it taught me the basics of programming. Some people say everyone has this little project they make when they’re learning a programming language. I think that for me it is a social-media platform / messaging app (it’s a bit lame, but I like it I guess).</p>
+<p>
+I always come back to those things. So what am I trying to say? That I’ve made a new social-media platform again of course! I’ve been learning Elixir for my side job at Qdentity in Maassland (great company btw :)). But this time there is a catch! This iteration of Nindo has support for all kinds of RSS. Forexample, you can share posts (like this one) via RSS feeds and your home feed (or FYP as some weird ‘influencers’ or ‘tiktokkers’ call it) is constructed from the users you follow on Nindo + EXTERNAL RSS FEEDS! That is so fucking awesome (in my opinion). Nindo is a bit like a mixture between social-media and an RSS reader in that way.</p>
+<p>
+So, what’s in it for you? I’m not sure if I’m gonna release it (and how and when). The code is publicly available <a href="https://github.com/RobinBoers/nindo-elixir">on GitHub</a> and the docs are hosted on my GitHub pages. You can check them out at <a href="https://robinboers.github.io/nindo-phx">robinboers.github.io/nindo-phx</a> and <a href="https://robinboers.github.io/nindo-elixir">robinboers.github.io/nindo-elixir</a>. For now it is hosted via the Qdentity cluster on <a href="https://fly.io">fly.io</a>. For now you can create an account freely and explore Nindo, but I could shut it down when it gets to much traffic.</p>
+<p>
+Let me know what you think about Nindo! I will try to post here quite regularly about the development and programming in general.</p>
+]]></description>
+  <pubDate>Tue, 14 Dec 2021 20:33:38 +0000</pubDate>
+  <link>https://nindo.geheimesite.nl/post/5</link>
+  <guid>https://nindo.geheimesite.nl/post/5</guid>
+</item>
+</channel>
+</rss>

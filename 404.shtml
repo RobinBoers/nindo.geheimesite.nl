@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html class="no-scrollbar xroly idc0_338 cryuryth" lang="en">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <meta content="ERMyam8ALGg9By85eHU-ez8jGnQBNj4UYce5VFT8eujOIDGJVJhAQGjN" name="csrf-token" />
+        <title>Oops! · Nindo</title>
+
+        <link rel="manifest" href="https://nindo.geheimesite.nl/manifest.webmanifest" />
+        <link rel="apple-touch-icon" href="https://nindo.geheimesite.nl/images/logo.png" />
+        <link rel="apple-touch-icon" href="https://nindo.geheimesite.nl/favicon.ico" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+        <!-- Light mode -->
+
+        <link phx-track-static="" rel="stylesheet" href="css/app-bc4fb7465d107fcad961e797282b2b95.css" />
+
+        <script defer="defer" phx-track-static="" type="text/javascript" src="js/app-20011b81f9d3e90bfb17ee586f3e770b.js"></script>
+    </head>
+    <body class="flex flex-col h-screen bg-gray-50 dark:bg-gray-900 no-scrollbar" data-new-gr-c-s-check-loaded="8.896.0" data-gr-ext-installed="">
+        <main class="flex-grow">
+            <header class="text-center mt-12 sm:mt-24 md:mt-36">
+                <h2 class="title">You've ventured into deep space!</h2>
+                <p class="subtitle">Look out, the <span class="highlight">404</span> Klingons are attacking our spacecraft!</p>
+
+                <div class="m-16">
+                    <a class="btn-primary" href="https://nindo.geheimesite.nl/">Escape to the homepage</a>
+                    <a class="btn-secondary" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Learn what's beyond*</a>
+                </div>
+
+                <p class="text-gray-500 text-xs">* Nindo isn't responsible for potential mental problems caused by going beyond. Click at own risk.</p>
+            </header>
+        </main>
+    </body>
+    <grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration>
+</html>
