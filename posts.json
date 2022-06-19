@@ -1,0 +1,83 @@
+[
+    {
+        "image": "",
+        "likes": 81,
+        "id": "5de2579b54ca6",
+        "text": "Hey, hoe is het er mee",
+        "auteur": "Michael",
+        "stemming": "uitgeschakeld",
+        "datum": "30 November, 12:50"
+    },
+    {
+        "image": "",
+        "likes": 6,
+        "id": "5dade94c92665",
+        "text": "\ud83d\udc96\ud83d\ude09\ud83d\ude0b\ud83d\ude1c",
+        "auteur": "Lize",
+        "stemming": "uitgeschakeld",
+        "datum": "21 October, 19:22"
+    },
+    {
+        "image": " \/library\/website\/nindo\/nindo_images\/5dade89cd688a.jpg",
+        "likes": 19,
+        "id": "5dade91ca2220",
+        "text": "I love the rainbow \ud83c\udff3\ufe0f\u200d\ud83c\udf08",
+        "auteur": "Lize",
+        "stemming": "uitgeschakeld",
+        "datum": "21 October, 19:21"
+    },
+    {
+        "image": null,
+        "likes": 116,
+        "id": "5dad725330513",
+        "text": "Hai, \nLeuk je op Nindo te zien!",
+        "auteur": "Robin",
+        "stemming": "uitgeschakeld",
+        "datum": "21 October, 10:54"
+    },
+    {
+        "image": null,
+        "likes": 1,
+        "id": "5d10c7fc7c739",
+        "text": "hallo ben nieuw hier :)\r\n",
+        "auteur": "1704",
+        "stemming": "vrolijk",
+        "datum": "24 June, 14:54"
+    },
+    {
+        "image": null,
+        "likes": 6,
+        "id": "5d0fadbf4261d",
+        "text": "hallo, ik ben jarig vandaag\r\n",
+        "auteur": "Nicky",
+        "stemming": "blij",
+        "datum": "23 June, 18:50"
+    },
+    {
+        "image": null,
+        "likes": 5,
+        "id": "5cf6b684ed567",
+        "text": "Ik heb vandaag een leuke dag gehad",
+        "auteur": "Nicky",
+        "stemming": "blij",
+        "datum": "4 June, 20:20"
+    },
+    {
+        "image": null,
+        "likes": 7,
+        "id": "5cf133b4da264",
+        "text": "Heyy",
+        "auteur": "Hacker",
+        "stemming": "vrolijk",
+        "datum": "31 May, 16:01"
+    },
+    {
+        "image": null,
+        "likes": 9,
+        "id": "5ce6a0f523311",
+        "text": "Ik zag je link op de elektromotor staan bij LelyKits workshop. Dus ik was wel nieuwsgierig. En om eerlijk te zijn ben ik wel onder de indruk! Ga zo door",
+        "auteur": "Lely007",
+        "stemming": "vrolijk",
+        "datum": "23 May, 15:32"
+    }
+]
