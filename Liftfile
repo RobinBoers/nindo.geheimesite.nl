@@ -1,0 +1,5 @@
+name: nindo.geheimesite.nl
+host: nov
+type: static
+src: .
+target: /volume1/www/nindo.geheimesite.nl
