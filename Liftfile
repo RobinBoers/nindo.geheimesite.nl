@@ -1,5 +1,4 @@
 name: nindo.geheimesite.nl
-host: nov
 type: static
+host: nov
 src: .
-target: /volume1/www/nindo.geheimesite.nl
