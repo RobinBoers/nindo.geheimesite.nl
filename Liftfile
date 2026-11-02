@@ -1,4 +1,4 @@
 name: nindo.geheimesite.nl
 type: static
-host: nov
+runner: nov
 src: .
